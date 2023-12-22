@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.NavBar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #333;
+}
+
+.NavBar .top {
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+}
+.bar img{
+    height: 3rem;
+    
+}
+
+.NavBar .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.NavBar .bar .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    list-style: none;
+    padding: 0;
+}
+
+.NavBar .bar .link li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+}
+.NavBar .login a{
+    text-decoration: none;
+    color: white;
+}
+
+.NavBar .bar .link li a:hover {
+    background-color: #4f4f4f;
+    color: #fff;
+}
+
+.NavBar .bar .sell {
+    background-color: #111;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.NavBar .bar .sell:hover {
+    background-color: #4f4f4f;
+    color: #fff;
+}
+
+.NavBar .bar .login {
+    background-color: #111;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.NavBar .bar .login:hover {
+    background-color: #4f4f4f;
+    color: #fff;
+}
+
+.NavBar .categories {
+    background-color: #53516d;
+    padding:  0.2rem 1rem;
+}
+
+.NavBar .categories ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.NavBar .categories ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+.NavBar .categories ul li a:hover {
+    background-color: #4f4f4f;
+    color: #fff;
+}
+
+.init-hide {
+    display: none;
+}
+.NavBar .bar .mobile{
+    display: none;
+    width:1rem;
+    padding: 0 0.5rem;
+    border-radius: 2rem;
+}
+#drop-down{
+    width:20rem;
+    padding: 0.2rem 2.5rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+.bar{
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .NavBar .bar .link {
+        display: none;
+    }
+
+    .NavBar .categories ul .remove{
+        display: none;
+    }
+    .NavBar .bar .login{
+        display: none;
+    }
+    .NavBar .bar .mobile{
+        display: initial;
+    }
+}

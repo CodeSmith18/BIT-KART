@@ -1,0 +1,38 @@
+.preloader{
+    height: 100vh;
+    width:100%;
+    background:#000;
+    color:#fff;
+    position:  fixed;
+    bottom: 0;
+    left: 0;
+    z-index:55;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.preloader .text-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 800;
+    overflow: hidden;
+    color:#fff;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: white;
+}
+.text-container img {
+    height: 200px;
+    width:200px;
+}
+.text-container h1 {
+    font-size: 10rem;
+    color: white;
+}
