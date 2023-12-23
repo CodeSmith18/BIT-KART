@@ -5,6 +5,21 @@ const mongoose =require("mongoose");
 const cors = require('cors');
 const bodyParser =require('body-parser');
 const jwt =require('jsonwebtoken');
+const multer =require('multer');
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads')
+    },
+    filename: function (req, file, cb) {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, file.fieldname + '-' + uniqueSuffix)
+    }
+  })
+  
+  const upload = multer({ storage: storage })
+  
+
+
 
 mongoose.connect('mongodb://127.0.0.1:27017/BITKART');
 const Users = mongoose.model('Users',{
@@ -14,6 +29,13 @@ const Users = mongoose.model('Users',{
     phno : Number,
     hno:Number
 });
+const Products =mongoose.model('Products',{
+    ProductName:String,
+    ProductDesc:String,
+    ProductPrice:String,
+    ProductCategory:String,
+    Pimage:String
+})
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
@@ -22,6 +44,46 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.get('/',(req,res)=>{
     res.send('hello world');
 });
+app.post('/Addproduct' ,upload.single('Pimage'),(req,res)=>{
+    console.log(req.body);
+    console.log(req.file.path);
+   const  ProductName = req.body.ProductName;
+   const  ProductDesc = req.body.ProductDesc;
+   const  ProductPrice = req.body.ProductPrice;
+   const  ProductCategory = req.body.ProductCategory;
+   const  Pimage = req.file.path;
+   
+
+    const product = new Products({
+    ProductName:ProductName,
+    ProductDesc:ProductDesc,
+    ProductPrice:ProductPrice,
+    ProductCategory:ProductCategory,
+    Pimage:Pimage
+
+    });
+    product.save()
+    .then(()=>{
+        res.send({message : 'save success'});
+    })
+    .catch(()=> {
+        res.send({message :'server err'});
+
+    })
+    return;
+})
+
+app.get('/getProducts', (req, res)=>{
+    Products.find()
+    .then((result)=>{
+        console.log(result,"Product data")
+        res.send({message:"success", products:result});
+
+    })
+    .catch((err)=>{
+        res.send({message:'server-err'})
+    })
+})
 
 app.post('/singup',(req,res)=>{
     console.log(req.body);

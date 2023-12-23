@@ -10,6 +10,7 @@ import Addproduct from "./components/Addproduct";
 import Ourteam from "./components/Our Team/Ourteam";
 
 
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
     path: "/Ourteam",
     element: (<Ourteam></Ourteam>) ,
   },
+
 ]);
 
 createRoot(document.getElementById("root")).render(
