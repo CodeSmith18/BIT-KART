@@ -6,7 +6,7 @@ import Headroom from 'react-headroom';
 import { ToastContainer, toast } from 'react-toastify';
  import 'react-toastify/dist/ReactToastify.css';
 
-function Nav(){
+function Nav(props){
    const msg1 ="You are Logged Out";
   
   const  navigate =useNavigate();
@@ -29,8 +29,14 @@ function Nav(){
     <Headroom>
       <nav class="NavBar">
 
-<div class="bar">
+   <div class="bar">
     <span><Link to="/"><img src={logo} alt="" /></Link></span>
+    <div className="search">
+
+      <input type="text" name="" id="" value={props && props.search} onChange={(e)=> props.handlesearch && props.handlesearch(e.target.value)}/>
+
+      <button className="search-btn" onClick={()=>props.handleClick && props.handleClick()}><i class="fa fa-search"></i></button>
+    </div>
 
     <ul class="link">
         <li><Link to="/">Home</Link></li>

@@ -52,7 +52,7 @@
     border-radius: 1.5rem;
 
 }
-h1{
+.Login-container h1{
     font-size: 3.5rem;
     color:rgb(1, 12, 65);
 }
@@ -72,11 +72,11 @@ h1{
 button:hover{
     cursor: pointer;
 }
-input::placeholder{
+.input input::placeholder{
     font-size: 1.5rem;
     color: rgb(3, 1, 54);
 }
-input{
+.input input{
     background-color: rgba(49, 43, 226, 0.393);
     font-size:1.5rem ;
     padding: 1.5rem;

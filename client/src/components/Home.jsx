@@ -10,13 +10,14 @@ import axios from "axios";
 function Home(){
     const  navigate =useNavigate();
     const [products ,setproducts] =useState([]);
+    const [search ,setSearch] =useState('');
 
-    useEffect(()=>{
-        if(!localStorage.getItem('token')){
-            
-            navigate('/login');
-        }
-    },[])
+    // useEffect(()=>{
+    //     if(!localStorage.getItem('token')){
+
+    //         navigate('/login');
+    //     }
+    // },[])
 
     useEffect(()=>{
         const url ='http://localhost:4000/getProducts';
@@ -33,11 +34,29 @@ function Home(){
         })
 
     });
+    const handlesearch =(value)=>{
+        console.log('hhh',value);
+        setSearch(value);
+    }
+    const handleClick =()=>{
+        console.log('products',products);
+        let filteredProducts = products.filter((item)=>{
+            if(item.ProductName.toLowerCase().includes(search.toLowerCase())||
+               item.ProductDesc.toLowerCase().includes(search.toLowerCase())||
+               item.ProductCategory.toLowerCase().includes(search.toLowerCase())){
+               return item;
+            }
+        });
+        console.log(filteredProducts);
+        setproducts(filteredProducts);
+        console.log( products);
+        
+    }
 
     return(
         <div>
            <Preloader></Preloader>
-            <Nav></Nav> 
+            <Nav search={search} handlesearch={handlesearch} handleClick={handleClick}></Nav> 
             <div className="products">
             {products && products.length>0 &&
                products.map((item , index)=>{

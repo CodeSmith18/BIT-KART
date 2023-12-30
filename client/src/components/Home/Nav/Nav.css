@@ -136,6 +136,18 @@ body {
 .bar{
     width: 100%;
 }
+.search input{
+    height: 1.7rem;
+    border: solid rgb(43, 5, 90) 1px;
+    border-radius: 0.5rem;
+}
+.search button{
+    height: 1.7rem;
+    width: 1.7rem;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 1rem;
+
+}
 
 @media (max-width: 1000px) {
     .NavBar .bar .link {
@@ -150,5 +162,9 @@ body {
     }
     .NavBar .bar .mobile{
         display: initial;
+    }
+    .bar img {
+        width:6rem;
+        height: 2rem;
     }
 }

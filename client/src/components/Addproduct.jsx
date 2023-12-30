@@ -5,7 +5,9 @@ import axios from "axios";
 
 
 
+
 function Addproduct(){
+    const  navigate =useNavigate();
     const[ProductName , setProductName]=useState('');
     const[ProductDesc , setProductDesc]=useState('');
     const[ProductPrice , setProductPrice]=useState('');
@@ -19,6 +21,7 @@ function Addproduct(){
     },[]);
   
     const submitHandler=()=>{
+ 
         const formdata =new FormData();
         formdata.append('ProductName',ProductName);
         formdata.append('ProductDesc',ProductDesc);
@@ -29,10 +32,13 @@ function Addproduct(){
         axios.post(url,formdata)
           .then((res)=>{
             console.log(res);
+            alert(res.data.message);
+            navigate('/');
           })
           .catch((err)=>{
               console.log(err);
           })
+       
     }
     return (
         <div>
