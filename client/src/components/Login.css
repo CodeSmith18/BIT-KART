@@ -7,6 +7,7 @@
 .login-singup{
     display: flex;
     
+    
 }
 .Login-container{
     height: 100vh;
@@ -53,7 +54,7 @@
 
 }
 .Login-container h1{
-    font-size: 3.5rem;
+    font-size: 4rem;
     color:rgb(1, 12, 65);
 }
 .ii{

@@ -6,6 +6,7 @@ import Headroom from 'react-headroom';
 import { ToastContainer, toast } from 'react-toastify';
  import 'react-toastify/dist/ReactToastify.css';
 
+
 function Nav(props){
    const msg1 ="You are Logged Out";
   
@@ -58,29 +59,7 @@ function Nav(props){
     </select>
 </div>
 </div>
-<div class="categories">
-    <ul>
-        <li><select name="All categories" id="drop-down">
-                <option value="All">All Categories</option>
-                <option value="Cycle">BiCycle</option>
-                <option value="Calculator">Calculator</option>
-                <option value="Coat">Lab Coat</option>
-                <option value="kit">EG Kit</option>
-                <option value="Clothes">Clothes</option>
-                <option value="Table">Study-Table</option>
-                <option value="Electronics">Electronics</option>
-                <option value="Shoes">Shoes</option>
-                <option value="Sports">Sports Accessories</option>
-            </select>
-        </li>
-        <li class="remove"><a href="#Cycle">BiCycle</a></li>
-        <li class="remove"><a href="#Calculator">Calculator</a></li>
-        <li class="remove"><a href="#Coat">Coat</a></li>
-        <li class="remove"><a href="#Table">Study Table</a></li>
-        <li class="remove"><a href="#Electronic">Electronics</a></li>
-    </ul>
 
-</div>
 
 
 </nav>

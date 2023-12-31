@@ -1,7 +1,6 @@
 .products{
     display:  flex;
     justify-content: space-evenly;
-    margin: 2rem;
     padding :2rem;
     flex-wrap: wrap;
     
