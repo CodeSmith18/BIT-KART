@@ -148,6 +148,9 @@ body {
     border-radius: 1rem;
 
 }
+#sch{
+    color:white;
+}
 
 @media (max-width: 1000px) {
     .NavBar .bar .link {

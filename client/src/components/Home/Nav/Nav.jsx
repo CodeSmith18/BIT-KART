@@ -5,6 +5,7 @@ import logo from './logo.png';
 import Headroom from 'react-headroom';
 import { ToastContainer, toast } from 'react-toastify';
  import 'react-toastify/dist/ReactToastify.css';
+ import LikedProduct from "../../LikedProduct/LikedProduct";
 
 
 function Nav(props){
@@ -13,6 +14,7 @@ function Nav(props){
   const  navigate =useNavigate();
   const handelLogout =()=>{
     localStorage.removeItem('token');
+    localStorage.removeItem('userId');
     
     navigate('/Login');
   }
@@ -36,7 +38,7 @@ function Nav(props){
 
       <input type="text" name="" id="" value={props && props.search} onChange={(e)=> props.handlesearch && props.handlesearch(e.target.value)}/>
 
-      <button className="search-btn" onClick={()=>props.handleClick && props.handleClick()}><i class="fa fa-search"></i></button>
+      <button className="search-btn" onClick={()=>props.handleClick && props.handleClick()}><i class="fa fa-search " id="sch"></i></button>
     </div>
 
     <ul class="link">
@@ -46,6 +48,7 @@ function Nav(props){
         <li><button class="sell" on onClick={sellHandler}>Sell Your Product</button></li>
         <li> <button onClick={handelLogout}>LogOut</button>
         <ToastContainer></ToastContainer></li>
+        <li><Link to="/like-product">Liked Product</Link></li>
     </ul>
     <div class="nav-button">
     <button class="login"><Link to="/Login">Login/Singup</Link></button>

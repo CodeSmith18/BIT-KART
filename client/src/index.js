@@ -8,6 +8,8 @@ import Login from "./components/Login";
 import SingUp from "./components/Singup";
 import Addproduct from "./components/Addproduct/Addproduct";
 import Ourteam from "./components/Our Team/Ourteam";
+import LikedProduct from "./components/LikedProduct/LikedProduct";
+import ProductDetail from "./components/ProductDetails/ProductDetails";
 
 
 
@@ -41,6 +43,15 @@ const router = createBrowserRouter([
     path: "/Ourteam",
     element: (<Ourteam></Ourteam>) ,
   },
+  {
+    path: "/like-product",
+    element: (<LikedProduct></LikedProduct>) ,
+  },
+  {
+    path: "/product/:productId",
+    element: (<ProductDetail></ProductDetail>) ,
+  },
+
 
 ]);
 

@@ -30,14 +30,17 @@ const Users = mongoose.model('Users',{
     password: String,
     email:  String,
     phno : Number,
-    hno:Number
+    hno:Number,
+    likedProducts:[{type:mongoose.Schema.Types.ObjectId,ref:'Products'}]
 });
 const Products =mongoose.model('Products',{
     ProductName:String,
     ProductDesc:String,
     ProductPrice:String,
     ProductCategory:String,
-    Pimage:String
+    Pimage:String,
+    Pimage2:String,
+    addedBy:mongoose.Schema.Types.ObjectId,
 })
 app.use(cors());
 app.use(bodyParser.json());
@@ -47,14 +50,29 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.get('/',(req,res)=>{
     res.send('hello world');
 });
-app.post('/Addproduct' ,upload.single('Pimage'),(req,res)=>{
+app.post('/like-product',(req,res)=>{
+    let productId = req.body.productId;
+    let userId = req.body.userId;
+
+    Users.updateOne({ _id: userId }, { $addToSet: { likedProducts: productId } })
+        .then(() => {
+            res.send({ message: 'liked success.' })
+        })
+        .catch(() => {
+            res.send({ message: 'server err' })
+        })
+
+})
+app.post('/Addproduct' ,upload.fields([{name:'Pimage'},{name:'Pimage2'}]),(req,res)=>{
     console.log(req.body);
-    console.log(req.file.path);
+    console.log(req.files);
    const  ProductName = req.body.ProductName;
    const  ProductDesc = req.body.ProductDesc;
    const  ProductPrice = req.body.ProductPrice;
    const  ProductCategory = req.body.ProductCategory;
-   const  Pimage = req.file.path;
+   const  Pimage = req.files.Pimage[0].path;
+   const  Pimage2 = req.files.Pimage2[0].path;
+   const addedBy =req.body.userId;
    
 
     const product = new Products({
@@ -62,7 +80,9 @@ app.post('/Addproduct' ,upload.single('Pimage'),(req,res)=>{
     ProductDesc:ProductDesc,
     ProductPrice:ProductPrice,
     ProductCategory:ProductCategory,
-    Pimage:Pimage
+    Pimage:Pimage,
+    Pimage2:Pimage2,
+    addedBy:addedBy,
 
     });
     product.save()
@@ -86,6 +106,28 @@ app.get('/getProducts', (req, res)=>{
     .catch((err)=>{
         res.send({message:'server-err'})
     })
+})
+app.get('/getProduct/:pId', (req, res)=>{
+    console.log(req.params);
+    Products.findOne( {_id : req.params.pId})
+    .then((result)=>{
+        // console.log(result,"Product data")
+        res.send({message:"success", products:result});
+
+    })
+    .catch((err)=>{
+        res.send({message:'server-err'})
+    })
+})
+app.post('/liked-product', (req, res)=>{
+    Users.findOne({ _id: req.body.userId }).populate('likedProducts')
+        .then((result) => {
+            res.send({ message: 'success', products: result.likedProducts })
+        })
+        .catch((err) => {
+            res.send({ message: 'server err' })
+        })
+
 })
 
 app.post('/singup',(req,res)=>{
@@ -113,6 +155,16 @@ app.post('/singup',(req,res)=>{
     })
 
 });
+app.get('/getUser/:uId',(req,res)=>{
+    const _userId=req.params.uId;
+    Users.findOne({_id:_userId})
+    .then((result)=>{
+        res.send({message:'user data exist',user:{username:result.username,email:result.email,phno:result.phno,hno:result.hno}});
+    })
+    .catch(()=>{
+        res.send({message:'server error'})
+    })
+})
 app.post('/login',(req,res)=>{
     console.log(req.body);
     const username=req.body.username;
@@ -128,7 +180,7 @@ app.post('/login',(req,res)=>{
                 const token  =jwt.sign({
                     data: result
                 },'MYKEY',{expiresIn:'1h'});
-                res.send({message:'User Exisit',token:token});
+                res.send({message:'User Exisit',token:token,userId:result._id});
              }else{
                 res.send({message:"Incorrect Password"});
              }

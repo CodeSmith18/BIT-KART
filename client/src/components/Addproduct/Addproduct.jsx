@@ -14,6 +14,8 @@ function Addproduct(){
     const[ProductPrice , setProductPrice]=useState('');
     const[ProductCategory , setProductCategory]=useState('');
     const[Pimage ,setPimage]=useState('');
+    const[Pimage2 ,setPimage2]=useState('');
+ 
 
     useEffect(()=>{
         if(!localStorage.getItem("token")){
@@ -29,6 +31,8 @@ function Addproduct(){
         formdata.append('ProductPrice',ProductPrice);
         formdata.append('ProductCategory',ProductCategory);
         formdata.append('Pimage',Pimage);
+        formdata.append('Pimage2',Pimage2);
+        formdata.append('userId',localStorage.getItem('userId'));
         const url = "http://localhost:4000/Addproduct";
         axios.post(url,formdata)
           .then((res)=>{
@@ -59,6 +63,12 @@ function Addproduct(){
                 onChange={(e)=>{setProductDesc(e.target.value)}}/>
                 <br />
                </div>
+               <div className="pd">
+               <label htmlFor="pprice"> Product Price:</label>
+                <input type="number"  id="price" value={ProductPrice} 
+                onChange={(e)=>{setProductPrice(e.target.value)}}/>
+                <br />
+               </div>
                 <div className="pd">
                 <label htmlFor="pcategory"> Product Category:</label>
                  <select name="" id="pcategory" value={ProductCategory}
@@ -80,6 +90,12 @@ function Addproduct(){
                 <label htmlFor="Pimage">Product Image</label>
                  <input type="file" className="Pimage" 
                  onChange={(e)=> setPimage(e.target.files[0])} />
+                 <br/>
+                </div>
+                <div className="pd">
+                <label htmlFor="Pimage2">Product Image</label>
+                 <input type="file" className="Pimage" 
+                 onChange={(e)=> setPimage2(e.target.files[0])} />
                  <br/>
                 </div>
                 <div className="pd">

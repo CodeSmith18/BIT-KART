@@ -4,11 +4,32 @@
     padding :2rem;
     flex-wrap: wrap;
     
+    
 }
 .card{
     margin :1rem;
     padding: 1rem;
-
-    border-radius: 1rem;
+background-color: white;
+    border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.icons{
+   height: 27px;
+   width: 27px;
+   color:rgb(160, 154, 151);
+   cursor: pointer;
+}
+.icons:hover,:focus{
+    color:red;
+}
+
+.icondiv{
+    position: absolute;
+    margin:0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(229, 221, 221);
 }

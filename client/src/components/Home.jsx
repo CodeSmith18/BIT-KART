@@ -6,6 +6,7 @@ import Preloader from "./preloader/preloader.jsx";
 import "./Home.css";
 import Categories from "./Categories/Categories.jsx";
 import axios from "axios";
+import { FaHeart,FaRegHeart } from "react-icons/fa";
 
 function Home(){
     const  navigate =useNavigate();
@@ -68,6 +69,39 @@ function Home(){
         })
         setcproducts(filteredProducts);
     }
+    const HandleLike =(productId,e)=>{
+        e.stopPropagation();
+        let userId =localStorage.getItem('userId');
+        if(!userId){
+            navigate("/Login");
+            alert("login first to like the product");
+            return;
+        }
+        console.log('userId', "productId",productId,userId);
+        const data ={userId,productId};
+        const url ='http://localhost:4000/like-product';
+        axios.post(url,data)
+        .then((res)=>{
+              if(res.data.message){
+                alert("liked");
+              }
+            
+        })
+        .catch((err)=>{
+            alert('server err');
+            
+        })
+    }
+    const handleProduct=(id)=>{
+        let userId =localStorage.getItem('userId');
+        if(!userId){
+            navigate("/Login");
+            alert("login first see details");
+            return;
+        }
+        
+        navigate('/product/'+id)
+    }
     
 
     return(
@@ -82,9 +116,13 @@ function Home(){
                 {cproducts && cproducts.length>0  && cproducts.map((item, index)=>{
                     return(
                         
-                        <div  key={item._id}className="card">
+                        <div onClick={()=>handleProduct(item._id)} key={item._id}className="card">
                             <h4>Search Result:</h4>
+                            <div onClick={(e)=> HandleLike(item._id,e)} className="icondiv">
+                            <FaHeart className="icons"></FaHeart>
+                            </div>
                             <img width="300px" height="300px" src={'http://localhost:4000/'+item.Pimage} />
+                            
                             <h4>{item.ProductCategory}</h4>
                             <h2>{item.ProductName}</h2>
                             <p>{item.ProductDesc}</p>
@@ -100,8 +138,12 @@ function Home(){
                   
                   return(
                      
-                    <div  key={item._id}className="card">
+                    <div  onClick={()=>handleProduct(item._id)} key={item._id}className="card">
+                        <div onClick={(e)=>HandleLike(item._id,e)} className="icondiv">
+                        <FaHeart className="icons"></FaHeart>
+                         </div>
                         <img width="300px" height="300px" src={'http://localhost:4000/'+item.Pimage} />
+                        
                         <h4>{item.ProductCategory}</h4>
                         <h2>{item.ProductName}</h2>
                         <p>{item.ProductDesc}</p>
