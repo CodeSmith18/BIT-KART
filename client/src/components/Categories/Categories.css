@@ -1,8 +1,7 @@
 .cat{
     display: flex;
     flex-direction: row;
-    background-color: rgba(26, 24, 24, 0.627);
-    backdrop-filter: blur(10px);
+    background-color: black;
     height: 2rem;
     align-items: center;
     
