@@ -11,6 +11,7 @@ import Ourteam from "./components/Our Team/Ourteam";
 import LikedProduct from "./components/LikedProduct/LikedProduct";
 import ProductDetail from "./components/ProductDetails/ProductDetails";
 import MyProducts from "./components/MyProducts/MyProducts";
+import UserProfile from "./components/UserProfile/UserProfile";
 
 
 
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "/my-products",
     element: (<MyProducts></MyProducts>) ,
+  },
+  {
+    path: "/UserProfile",
+    element: (<UserProfile></UserProfile>) ,
   },
  
 
