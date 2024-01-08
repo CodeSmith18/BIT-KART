@@ -1,0 +1,21 @@
+.cat{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(26, 24, 24, 0.627);
+    backdrop-filter: blur(10px);
+    height: 2rem;
+    align-items: center;
+    
+}
+.cat span{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    transition: transform 0.1s ease;
+    cursor: pointer;
+}
+.cat span:hover{
+    transform: scale(1.1);
+    color: black;
+
+}

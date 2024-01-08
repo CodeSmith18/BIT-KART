@@ -10,6 +10,7 @@ import Addproduct from "./components/Addproduct/Addproduct";
 import Ourteam from "./components/Our Team/Ourteam";
 import LikedProduct from "./components/LikedProduct/LikedProduct";
 import ProductDetail from "./components/ProductDetails/ProductDetails";
+import MyProducts from "./components/MyProducts/MyProducts";
 
 
 
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
     path: "/product/:productId",
     element: (<ProductDetail></ProductDetail>) ,
   },
+  {
+    path: "/my-products",
+    element: (<MyProducts></MyProducts>) ,
+  },
+ 
 
 
 ]);

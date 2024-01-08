@@ -1,12 +1,14 @@
+import "./Categories.css";
 let Cat_list =['Bicycle','calculator','clothing','Lab Coat','Study Table','Electronics' ,'sports','Footwear','Stationary'];
+
+
 
 function Categories(props){
     return(
+        
         <div className="cat">
-            <div>
-      
-            </div>
-            <div>
+            
+            
                 <span>All Categories</span>
                 {
                     Cat_list&&Cat_list.length >0 &&
@@ -19,7 +21,7 @@ function Categories(props){
                 }
             </div>
 
-        </div>
+        
     );
 }
 export default Categories;

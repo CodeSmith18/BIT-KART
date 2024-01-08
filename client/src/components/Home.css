@@ -3,16 +3,27 @@
     justify-content: space-evenly;
     padding :2rem;
     flex-wrap: wrap;
-    
+    background-image: url(bg.jpg);
+    background-repeat:repeat;
+
+
     
 }
-.card{
-    margin :1rem;
+.card {
+    margin: 1rem;
     padding: 1rem;
-background-color: white;
+    background-color: white;
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    cursor: pointer;
 }
+
+.card:hover {
+    transform: scale(1.05); /* Increase the size on hover */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 6px 6px, rgba(0, 0, 0, 0.25) 0px 15px 15px;
+}
+
 .icons{
    height: 27px;
    width: 27px;

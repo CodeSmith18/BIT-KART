@@ -21,15 +21,15 @@ export const preLoaderAnim = () => {
       ease: "Power3.easeOut",
     })
     .from(".texts-container span", {
-      duration: 1.5,
-      delay: 1,
+      duration: 0.8,
+      delay: 0.5,
       y: 70,
       skewY: 10,
       stagger: 0.4,
       ease: "Power3.easeOut",
     })
     .to(".texts-container span", {
-      duration: 1,
+      duration: 0.5,
       y: 70,
       skewY: -20,
       stagger: 0.2,
@@ -46,7 +46,7 @@ export const preLoaderAnim = () => {
       ease: "power3.inOut",
     })
     .from(".landing__top .sub", {
-      duration: 1,
+      duration: 0.5,
       opacity: 0,
       y: 80,
       ease: "expo.easeOut",
@@ -54,7 +54,7 @@ export const preLoaderAnim = () => {
     .to(
       ".preloader",
       {
-        duration: 1.5,
+        duration: 1,
         height: "0vh",
         ease: "Power3.easeOut",
         onComplete: mobileLanding(),

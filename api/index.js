@@ -31,7 +31,8 @@ const Users = mongoose.model('Users',{
     email:  String,
     phno : Number,
     hno:Number,
-    likedProducts:[{type:mongoose.Schema.Types.ObjectId,ref:'Products'}]
+    likedProducts:[{type:mongoose.Schema.Types.ObjectId,ref:'Products'}],
+    YourProducts:[{type:mongoose.Schema.Types.ObjectId,ref:'Products'}]
 });
 const Products =mongoose.model('Products',{
     ProductName:String,
@@ -50,6 +51,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.get('/',(req,res)=>{
     res.send('hello world');
 });
+
 app.post('/like-product',(req,res)=>{
     let productId = req.body.productId;
     let userId = req.body.userId;
@@ -123,6 +125,17 @@ app.post('/liked-product', (req, res)=>{
     Users.findOne({ _id: req.body.userId }).populate('likedProducts')
         .then((result) => {
             res.send({ message: 'success', products: result.likedProducts })
+        })
+        .catch((err) => {
+            res.send({ message: 'server err' })
+        })
+
+})
+app.post('/my-products', (req, res)=>{
+    const userId=req.body.userId;
+        Products.find({ addedBy:userId })
+        .then((result) => {
+            res.send({ message: 'success', products: result})
         })
         .catch((err) => {
             res.send({ message: 'server err' })
