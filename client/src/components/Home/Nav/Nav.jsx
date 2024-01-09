@@ -6,10 +6,21 @@ import Headroom from 'react-headroom';
 import { ToastContainer, toast } from 'react-toastify';
  import 'react-toastify/dist/ReactToastify.css';
  import LikedProduct from "../../LikedProduct/LikedProduct";
+ import user from "./user.png"
+ import { useState } from "react";
 
 
 function Nav(props){
    const msg1 ="You are Logged Out";
+   
+   const [showDropdown, setShowDropdown] = useState(false);
+
+   const toggleDropdown = () => {
+     setShowDropdown(!showDropdown);
+   };
+   let userId=localStorage.getItem('userId');
+ 
+  
   
   const  navigate =useNavigate();
   const handelLogout =()=>{
@@ -46,32 +57,34 @@ function Nav(props){
         <li><a href="#aboutus">About Us</a></li>
         <li><Link to="/Ourteam">Our Team</Link></li>
         <li><button class="sell" on onClick={sellHandler}>Sell Your Product</button></li>
-        <li> <button onClick={handelLogout}>LogOut</button>
-        <ToastContainer></ToastContainer></li>
-        <li><Link to="/like-product">Liked Product</Link></li>
-        <li><Link to="/UserProfile">UserProfile</Link></li>
-    </ul>
-    <div class="nav-button">
-    <button class="login"><Link to="/Login">Login/Singup</Link></button>
-    <button id="User" class="init-hide"><a href="#user">U</a></button>
-    <select name="button" id="opt" class="mobile">
-        <option value="Home"><Link to="/">Home</Link></option>
-        <option value="AboutUs"><a href="#aboutus">About Us</a></option>
-        <option value="OurTeam"><Link to="/Ourteam">Our Team</Link></option>
-        <option value="Login"><Link to="/Login">Login/Singup</Link></option>
-          
-    </select>
-</div>
-</div>
-
-
-
-</nav>
-
-    </Headroom>
-      
         
-    );
+        {/* 
+        <li><Link to="/like-product">Liked Product</Link></li>
+        <li><Link to="/UserProfile">UserProfile</Link></li> */}
+    </ul>
+    {!userId &&<button class="login"><Link to="/Login">Login/Singup</Link></button>}
+    <div className="user-container" onClick={toggleDropdown}>
+        
+        <img src={user} alt="User" className="user-image1" />
+    </div>
+</div>
+
+
+</nav> 
+{showDropdown && (
+        <div className="dropdown1">
+          <ul>
+            <li><Link to="/like-product">Favourites</Link></li>
+            <li><Link to="/my-products">Your Products</Link></li>
+            <li><Link to="/UserProfile">UserProfile</Link></li>
+            <li> <button onClick={handelLogout}>LogOut</button></li>
+           
+          </ul>
+        </div>
+      )}
+</Headroom>
+      
+);
 }
 export default Nav;
 
