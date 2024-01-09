@@ -32,10 +32,7 @@ function ProductDetail(){
         .then((res)=>{
             if(res.data.user){
                 setUser(res.data.user);
-            }
-
-            
-            
+            }  
         })
         .catch((err)=>{
             console.log(err);

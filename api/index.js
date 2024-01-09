@@ -31,6 +31,9 @@ const Users = mongoose.model('Users',{
     email:  String,
     phno : Number,
     hno:Number,
+    roll:String,
+    year:Number,
+    branch:String,
     likedProducts:[{type:mongoose.Schema.Types.ObjectId,ref:'Products'}],
     YourProducts:[{type:mongoose.Schema.Types.ObjectId,ref:'Products'}]
 });
@@ -168,11 +171,43 @@ app.post('/singup',(req,res)=>{
     })
 
 });
+app.post('/UserProfile', async (req, res) => {
+    try {
+        const { username, email, phno, hno, roll, year, branch, userId } = req.body;
+
+        await Users.updateMany({ _id: userId }, {
+            $set: {
+                username: username,
+                email: email,
+                phno: phno,
+                hno: hno,
+                roll: roll,
+                year: year,
+                branch: branch,
+            }
+        });
+
+        res.send({ message: 'update success' });
+        console.log({
+            username,
+            email,
+            phno,
+            hno,
+            roll,
+            year,
+            branch
+        });
+    } catch (error) {
+        console.error(error);
+        res.send({ message: 'server err' });
+    }
+});
+
 app.get('/getUser/:uId',(req,res)=>{
     const _userId=req.params.uId;
     Users.findOne({_id:_userId})
     .then((result)=>{
-        res.send({message:'user data exist',user:{username:result.username,email:result.email,phno:result.phno,hno:result.hno}});
+        res.send({message:'user data exist',user:{username:result.username,email:result.email,phno:result.phno,hno:result.hno,roll:result.roll,year:result.year,branch:result.branch}});
     })
     .catch(()=>{
         res.send({message:'server error'})

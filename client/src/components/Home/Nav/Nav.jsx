@@ -49,6 +49,7 @@ function Nav(props){
         <li> <button onClick={handelLogout}>LogOut</button>
         <ToastContainer></ToastContainer></li>
         <li><Link to="/like-product">Liked Product</Link></li>
+        <li><Link to="/UserProfile">UserProfile</Link></li>
     </ul>
     <div class="nav-button">
     <button class="login"><Link to="/Login">Login/Singup</Link></button>
