@@ -1,0 +1,139 @@
+.page-conatiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(./backg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.product-detail-container {
+   
+    width:90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(36, 33, 33, 0.364);
+    backdrop-filter: blur(10px);
+    border-radius: 3rem;
+    color: white;
+    margin-top:5rem;
+    margin-bottom: 5rem;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-around;
+    
+   
+}
+.pdd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.product-images {
+   display: flex;
+   flex-direction: column;
+   border-right: solid white 2px;
+   padding-right: 8rem;
+  
+}
+
+.product-images img {
+   left:0;
+   right:0;
+    height: 20rem;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.product-images img:hover {
+    transform: scale(1.1);
+}
+
+.product-info {
+    border:solid white 2px;
+    padding:3rem;
+    border-radius: 2rem;
+}
+
+.contact-details {
+    border:solid white 2px;
+    padding:4rem;
+    border-radius: 2rem;
+}
+.contact-details img{
+    height: 5rem;
+    width: 5rem;
+    
+
+}
+
+.pd {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+h2 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.product-name {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-description {
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.contact-name,
+.contact-number {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.contact-number {
+    color: #e74c3c;
+}
+
+.contact-email {
+    font-size: 15px;
+    color: #3498db;
+}
