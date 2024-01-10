@@ -12,6 +12,7 @@ import LikedProduct from "./components/LikedProduct/LikedProduct";
 import ProductDetail from "./components/ProductDetails/ProductDetails";
 import MyProducts from "./components/MyProducts/MyProducts";
 import UserProfile from "./components/UserProfile/UserProfile";
+import AboutUs from "./components/aboutUS/aboutUs";
 
 
 
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
   {
     path: "/UserProfile",
     element: (<UserProfile></UserProfile>) ,
+  },
+  {
+    path: "/aboutus",
+    element: (<AboutUs></AboutUs>) ,
   },
  
 

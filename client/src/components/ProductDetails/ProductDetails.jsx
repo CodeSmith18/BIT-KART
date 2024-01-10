@@ -67,7 +67,7 @@ function ProductDetail() {
                            
                         </div>
                         <div className="contact-details">
-                            {product.addedBy && <button className="pd" onClick={() => HandleContact(product.addedBy)}>Show Contact Details:</button>}
+                            {product.addedBy && <button className="pd1" onClick={() => HandleContact(product.addedBy)}>Show Contact Details:</button>}
                             {user && user.username && <h2>Username:{user.username}</h2>}
                             {user && user.phno && <h2>Phone Number:{user.phno}</h2>}
                             {user && user.username && <h2>Email:{user.email}</h2>}

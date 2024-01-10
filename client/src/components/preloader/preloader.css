@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.preloader .text-container{
+.preloader .text-container11{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,18 +21,18 @@
     overflow: hidden;
     color:#fff;
 }
-.text-container{
+.text-container11{
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     color: white;
 }
-.text-container img {
+.text-container11 img {
     height: 200px;
     width:200px;
 }
-.text-container h1 {
+.text-container11 h1 {
     font-size: 10rem;
     color: white;
 }

@@ -54,7 +54,7 @@ function Nav(props){
 
     <ul class="link">
         <li><Link to="/">Home</Link></li>
-        <li><a href="#aboutus">About Us</a></li>
+        <li><Link to="/aboutus">About Us</Link></li>
         <li><Link to="/Ourteam">Our Team</Link></li>
         <li><button class="sell" on onClick={sellHandler}>Sell Your Product</button></li>
         
