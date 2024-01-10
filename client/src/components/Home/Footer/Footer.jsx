@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link , Navigate ,useNavigate} from "react-router-dom";
 
 function Footer(){
     return(
@@ -7,19 +8,17 @@ function Footer(){
     <footer>
     <div class="footerContainer">
         <div class="socialIcon">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/nikhilsingh_rajput_18/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-github"></i></a>
-            <a href=""><i class="fa-brands fa-google-plus"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <Link to="/Ourteam"><i class="fa-brands fa-facebook"></i></Link>
+            <Link to="/Ourteam"><i class="fa-brands fa-instagram"></i></Link>
+            <a href="https://github.com/CodeSmith18/BIT-KART"><i class="fa-brands fa-github"></i></a>
+            <Link to="/Ourteam"><i class="fa-brands fa-google-plus"></i></Link>
+            <Link to="/Ourteam"><i class="fa-brands fa-linkedin"></i></Link>
         </div>
         <div class="footerNav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">Our Team</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="">About Us</Link></li>
+                <li><Link to="/Ourteam">Our Team</Link></li>
             </ul>
         </div>
     </div>
