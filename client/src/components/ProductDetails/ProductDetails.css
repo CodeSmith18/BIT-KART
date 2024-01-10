@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: rgba(36, 33, 33, 0.364);
     backdrop-filter: blur(10px);
     border-radius: 3rem;
@@ -36,7 +37,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
    
 }
 
@@ -64,13 +65,13 @@
 }
 
 .product-info {
-    border:solid white 2px;
+    /* border:solid white 2px; */
     padding:3rem;
     border-radius: 2rem;
 }
 
 .contact-details {
-    border:solid white 2px;
+    /* border:solid white 2px; */
     padding:4rem;
     border-radius: 2rem;
 }
