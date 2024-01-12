@@ -14,7 +14,11 @@
     padding: 1rem;
     background-color: rgba(52, 49, 49, 0.271);
     backdrop-filter: blur(10px);
-    
+    max-width:44vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
@@ -49,4 +53,5 @@
     padding: 10px;
     border-radius: 50%;
     background-color: rgb(229, 221, 221);
+    text-wrap: wrap;
 }

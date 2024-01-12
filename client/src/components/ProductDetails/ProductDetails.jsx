@@ -64,7 +64,7 @@ function ProductDetail() {
                       <div className="product-info">
                            <h2> Product Name:{product.ProductName}</h2> 
                            <h2> Product Price: Rs{product.ProductPrice} </h2>
-                           <h2>Prodcut Description:</h2> <p> {product.ProductDesc}</p>
+                           <h2>Prodcut Description: <p> {product.ProductDesc}</p></h2>
                            
                         </div>
                         <div className="contact-details">
@@ -76,7 +76,7 @@ function ProductDetail() {
                             {user && user.hno && <h2>Hostel Number:{user.hno}</h2>}
                             {user && user.roll && <h2>Roll:{user.roll}</h2>}
                             {user && user.year && <h2>Year:{user.year}</h2>}
-                            {user && user.branch && <h2>Branch:{user.year}</h2>}
+                            {user && user.branch && <h2>Branch:{user.branch}</h2>}
                             
                               
                         </div>

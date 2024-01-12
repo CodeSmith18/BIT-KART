@@ -52,25 +52,25 @@ function Addproduct(){
             <div className="productd">
             <h2>Add Your Product here:</h2>
                <div className="pd">
-               <label  htmlFor="pname"> Product Name:</label>
+               <label  htmlFor="pname"> Product Name:(required)</label>
                 <input type="text"  id="pname" value={ProductName} 
-                onChange={(e)=>{setProductName(e.target.value)}}/>
+                onChange={(e)=>{setProductName(e.target.value)}} />
                 <br />
                </div>
                <div className="pd">
-               <label htmlFor="pdesc"> Product desc:</label>
+               <label htmlFor="pdesc"> Product desc:(required)</label>
                 <input type="text"  id="pdesc" value={ProductDesc} 
                 onChange={(e)=>{setProductDesc(e.target.value)}}/>
                 <br />
                </div>
                <div className="pd">
-               <label htmlFor="pprice"> Product Price:</label>
+               <label htmlFor="pprice"> Product Price:(required)</label>
                 <input type="number"  id="price" value={ProductPrice} 
                 onChange={(e)=>{setProductPrice(e.target.value)}}/>
                 <br />
                </div>
                 <div className="pd">
-                <label htmlFor="pcategory"> Product Category:</label>
+                <label htmlFor="pcategory"> Product Category:(required)</label>
                  <select name="" id="pcategory" value={ProductCategory}
                  onChange={(e)=>{setProductCategory(e.target.value)}}>
                     <option>BiCycle</option>
@@ -78,8 +78,8 @@ function Addproduct(){
                     <option>Clothing</option>
                     <option>Lab Coat</option>
                     <option>EG Kit</option>
-                    <option >Study-Table</option>
-                    <option >Sationary</option>
+                    <option >Study Table</option>
+                    <option >Stationary</option>
                     <option >Footwear</option>
                     <option>Electronics</option>
                     <option>Sports</option>
@@ -87,13 +87,13 @@ function Addproduct(){
                 <br />
                 </div>
                 <div className="pd">
-                <label htmlFor="Pimage">Product Image</label>
+                <label htmlFor="Pimage">Product Image:(required)</label>
                  <input type="file" className="Pimage" 
                  onChange={(e)=> setPimage(e.target.files[0])} />
                  <br/>
                 </div>
                 <div className="pd">
-                <label htmlFor="Pimage2">Product Image</label>
+                <label htmlFor="Pimage2">Product Image:(required)</label>
                  <input type="file" className="Pimage" 
                  onChange={(e)=> setPimage2(e.target.files[0])} />
                  <br/>

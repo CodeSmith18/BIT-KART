@@ -52,6 +52,7 @@ body {
 .product-images {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 
 }
 
