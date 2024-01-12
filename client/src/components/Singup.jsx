@@ -20,7 +20,7 @@ function  SingUp(){
         phno,
         hno
     });
-    const url ='http://localhost:4000/singup';
+    const url ='https://bit-kart.onrender.com/singup';
     const data ={ username, password, email,  phno, hno };
     axios.post(url,data)
     .then((res)=>{

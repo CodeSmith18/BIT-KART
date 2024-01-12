@@ -22,7 +22,7 @@ function MyProducts(){
     // },[])
 
     useEffect(()=>{
-        const url ='http://localhost:4000/my-products';
+        const url ='https://bit-kart.onrender.com/my-products';
         let data ={userId: localStorage.getItem('userId')};
         axios.post(url,data)
         .then((res)=>{
@@ -80,7 +80,7 @@ function MyProducts(){
         }
         console.log('userId', "productId",productId,userId);
         const data ={userId,productId};
-        const url ='http://localhost:4000/like-product';
+        const url ='https://bit-kart.onrender.com/like-product';
         axios.post(url,data)
         .then((res)=>{
               if(res.data.message){
@@ -113,7 +113,7 @@ function MyProducts(){
                             <div onClick={()=>HandleLike(item._id)} className="icondiv">
                             <FaHeart className="icons"></FaHeart>
                             </div>
-                            <img width="300px" height="300px" src={'http://localhost:4000/'+item.Pimage} />
+                            <img width="300px" height="300px" src={'https://bit-kart.onrender.com/'+item.Pimage} />
                             
                             <h4>{item.ProductCategory}</h4>
                             <h2>{item.ProductName}</h2>
@@ -134,7 +134,7 @@ function MyProducts(){
                         <div onClick={()=>HandleLike(item._id)} className="icondiv">
                         <FaHeart className="icons"></FaHeart>
                          </div>
-                        <img width="300px" height="300px" src={'http://localhost:4000/'+item.Pimage} />
+                        <img width="300px" height="300px" src={'https://bit-kart.onrender.com/'+item.Pimage} />
                         
                         <h4>{item.ProductCategory}</h4>
                         <h2>{item.ProductName}</h2>

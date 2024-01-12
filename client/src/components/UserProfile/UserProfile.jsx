@@ -19,7 +19,7 @@ function UserProfile() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const url = `http://localhost:4000/getUser/${userId}`;
+        const url = `https://bit-kart.onrender.com/getUser/${userId}`;
         const response = await axios.get(url);
         if (response.data.user) {
           setUser(response.data.user);
@@ -53,7 +53,7 @@ function UserProfile() {
   }, [user]);
 
   const update = () => {
-    const url = "http://localhost:4000/UserProfile";
+    const url = "https://bit-kart.onrender.com/UserProfile";
     const data = {
       username,
       email,

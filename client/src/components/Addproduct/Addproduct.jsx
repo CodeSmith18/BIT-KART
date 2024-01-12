@@ -33,7 +33,7 @@ function Addproduct(){
         formdata.append('Pimage',Pimage);
         formdata.append('Pimage2',Pimage2);
         formdata.append('userId',localStorage.getItem('userId'));
-        const url = "http://localhost:4000/Addproduct";
+        const url = "https://bit-kart.onrender.com/Addproduct";
         axios.post(url,formdata)
           .then((res)=>{
             console.log(res);
