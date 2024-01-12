@@ -16,7 +16,7 @@ To run the BIT-KART project locally, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/bit-kart.git
+    git clone https://github.com/CodeSmith18/BIT-KART.git
     ```
 
 2. Navigate to the project directory:
