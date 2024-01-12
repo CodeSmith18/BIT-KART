@@ -3,6 +3,7 @@ import ritik  from "./ritik.jpg";
 import saket from "./saket.jpg";
 import Nav from "../Home/Nav/Nav";
 import Footer from "../Home/Footer/Footer";
+import nikhil from  "./nikhil.jpg";
 
 
 function Ourteam(){
@@ -47,7 +48,7 @@ function Ourteam(){
             </div>
             <div className="profile-card">
                 <div className="img">
-                    <img src={ritik}></img>
+                    <img src={nikhil}></img>
                 </div>
                 <div className="caption">
                     <h3>Nikhil Singh</h3>
