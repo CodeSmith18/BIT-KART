@@ -93,6 +93,16 @@ function LikedProduct(){
             
         })
     }
+    const handleProduct=(id)=>{
+        let userId =localStorage.getItem('userId');
+        if(!userId){
+            navigate("/Login");
+            alert("login first see details");
+            return;
+        }
+        
+        navigate('/product/'+id)
+    }
     
 
     return(
@@ -108,7 +118,7 @@ function LikedProduct(){
                 {cproducts && cproducts.length>0  && cproducts.map((item, index)=>{
                     return(
                         
-                        <div  key={item._id}className="card">
+                        <div onClick={()=>handleProduct(item._id)} key={item._id}className="card">
                             <h4>Search Result:</h4>
                             <div onClick={()=>HandleLike(item._id)} className="icondiv">
                             <FaHeart className="icons"></FaHeart>

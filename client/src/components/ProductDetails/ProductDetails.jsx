@@ -4,6 +4,7 @@ import axios from "axios";
 import Nav from "../Home/Nav/Nav";
 import "./ProductDetails.css";
 import  whatsapp from "./whatsapp.png"
+import Footer from "../Home/Footer/Footer";
 function ProductDetail() {
     const p = useParams();
     console.log(p.productId);
@@ -48,7 +49,7 @@ function ProductDetail() {
     let uu = user && user.phno ? `https://wa.me/+91${user.phno}` : '';
 
 
-    return (<>
+    return (<div className="motherr">
         <Nav></Nav>
         <div className="page-conatiner">
             <div className="product-detail-container">
@@ -70,12 +71,13 @@ function ProductDetail() {
                             {product.addedBy && <button className="pd1" onClick={() => HandleContact(product.addedBy)}>Show Contact Details:</button>}
                             {user && user.username && <h2>Username:{user.username}</h2>}
                             {user && user.phno && <h2>Phone Number:{user.phno}</h2>}
+                            {user && user.phno && <h2><a href={uu}><img src={whatsapp} alt="" /></a></h2>}
                             {user && user.username && <h2>Email:{user.email}</h2>}
                             {user && user.hno && <h2>Hostel Number:{user.hno}</h2>}
                             {user && user.roll && <h2>Roll:{user.roll}</h2>}
                             {user && user.year && <h2>Year:{user.year}</h2>}
                             {user && user.branch && <h2>Branch:{user.year}</h2>}
-                            {user && user.phno && <a href={uu}><img src={whatsapp} alt="" /></a>}
+                            
                               
                         </div>
                        
@@ -86,7 +88,8 @@ function ProductDetail() {
               
             </div>
         </div>
-    </>
+        <Footer></Footer>
+    </div>
     );
 }
 export default ProductDetail;
