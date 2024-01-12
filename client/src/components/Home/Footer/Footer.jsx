@@ -23,7 +23,7 @@ function Footer(){
         </div>
     </div>
     <div class="footerBottom">
-        <p>Copyright &copy;2023; Designed by <span class="designer">TONY STARK</span></p>
+        <p>Copyright &copy;2023; Designed by <span class="designer">BITKART TEAM</span></p>
     </div>
     </footer>
 
