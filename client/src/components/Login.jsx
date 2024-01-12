@@ -58,9 +58,10 @@ function Login(){
                  </div>     
                  <div className="Singup">
                     <h1>New Here?</h1>
-                    <p>Sing up and Start a Journey with us . .</p>
                     <button className="singbtn" onClick={singHandler}>Singup</button>
-                 {/* <Link to="/Singup">SingUp</Link> */}
+                    <p>Sing up and Start a Journey with us . .</p>
+                    
+                 
                 </div>  
                 </div>
                    

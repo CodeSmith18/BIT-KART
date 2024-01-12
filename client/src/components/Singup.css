@@ -88,3 +88,48 @@
 button:hover{
     cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+    .singup {
+        width: 100%;
+        padding: 2rem; 
+    }
+
+    .singup h1 {
+        font-size: 3rem; 
+    }
+
+    .input input {
+        width: 100%; 
+    }
+}
+.loginn {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: rgba(160, 48, 198, 0.735);
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .loginn {
+        padding: 1rem;
+    }
+
+    .heading h1 {
+        font-size: 4rem;
+        margin: 0.5rem;
+    }
+
+    .tt h2 {
+        font-size: 2rem;
+    }
+
+    .loginn button {
+        padding: 0.5rem 2rem;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+}
+

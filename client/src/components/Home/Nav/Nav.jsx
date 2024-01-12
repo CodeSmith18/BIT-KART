@@ -78,6 +78,10 @@ function Nav(props){
             <li><Link to="/my-products">Your Products</Link></li>
             <li><Link to="/UserProfile">UserProfile</Link></li>
             <li> <button onClick={handelLogout}>LogOut</button></li>
+            <li><Link to="/aboutus">About Us</Link></li>
+            <li><Link to="/Ourteam">Our Team</Link></li>
+            <li><button class="sell" on onClick={sellHandler}>Sell Your Product</button></li>
+           <li> {!userId &&<button class="login"><Link to="/Login">Login/Singup</Link></button>}</li>
            
           </ul>
         </div>
