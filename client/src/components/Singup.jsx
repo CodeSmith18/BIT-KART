@@ -55,7 +55,7 @@ function  SingUp(){
                   <input type="text" value={username} onChange={(e)=>{setusername(e.target.value)}}id="username"placeholder="Username"/>
                   <br />
                   
-                  <input type="text" id="password" value={password} onChange={(e)=>{setpassword(e.target.value)}}placeholder="Enter Your Password"/>
+                  <input type="password" id="password" value={password} onChange={(e)=>{setpassword(e.target.value)}}placeholder="Enter Your Password"/>
                   <br />
                   
                   <input type="text" id="phnumber"value={phno} onChange={(e)=>{setphnumber(e.target.value)}} placeholder="Enter Your Ph.No."/>

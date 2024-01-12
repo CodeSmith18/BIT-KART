@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     background-image: url(bg.avif);
     background-repeat:repeat;
+    scroll-behavior: smooth;
   
 
     
