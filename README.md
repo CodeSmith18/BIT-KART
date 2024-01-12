@@ -1,4 +1,4 @@
-# BIT-KART: Campus Commerce Platform
+# BIT-KART: Empowering Campus E-commerce
 
 BIT-KART is an innovative web development project that introduces a dynamic online platform tailored for the buying and selling of second-hand goods within a college campus. This platform is designed to foster a sense of community, sustainability, and convenience among students by providing a seamless and secure way to exchange pre-owned items.
 
