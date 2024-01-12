@@ -49,11 +49,8 @@ If you'd like to contribute to BIT-KART, please follow our [contribution guideli
 
 ## Issues and Bug Reports
 
-If you encounter any issues or would like to report a bug, please use the [issue tracker](https://github.com/your-username/bit-kart/issues) on GitHub.
+If you encounter any issues or would like to report a bug, please use the [issue tracker](https://github.com/CodeSmith18/BIT-KART/issues) on GitHub.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
