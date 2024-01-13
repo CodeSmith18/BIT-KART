@@ -74,7 +74,7 @@ function Home(){
         let userId =localStorage.getItem('userId');
         if(!userId){
             navigate("/Login");
-            alert("login first to like the product");
+            // alert("login first to like the product");
             return;
         }
         console.log('userId', "productId",productId,userId);
@@ -83,7 +83,7 @@ function Home(){
         axios.post(url,data)
         .then((res)=>{
               if(res.data.message){
-                alert("liked");
+                // alert("liked");
               }
             
         })
@@ -96,7 +96,7 @@ function Home(){
         let userId =localStorage.getItem('userId');
         if(!userId){
             navigate("/Login");
-            alert("login first see details");
+            // alert("login first see details");
             return;
         }
         

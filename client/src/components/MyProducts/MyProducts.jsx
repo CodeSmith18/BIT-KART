@@ -75,7 +75,7 @@ function MyProducts(){
 
         if(!userId){
             navigate('/Login');
-            alert('login first');
+            // alert('login first');
             return;
         }
         console.log('userId', "productId",productId,userId);

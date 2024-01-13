@@ -75,7 +75,7 @@ function LikedProduct(){
 
         if(!userId){
             navigate('/Login');
-            alert('login first');
+           
             return;
         }
         console.log('userId', "productId",productId,userId);
@@ -84,7 +84,7 @@ function LikedProduct(){
         axios.post(url,data)
         .then((res)=>{
               if(res.data.message){
-                alert("liked");
+               
               }
             
         })
@@ -97,7 +97,6 @@ function LikedProduct(){
         let userId =localStorage.getItem('userId');
         if(!userId){
             navigate("/Login");
-            alert("login first see details");
             return;
         }
         
@@ -112,6 +111,7 @@ function LikedProduct(){
             <Categories handleCategory={handleCategory}></Categories>
             <h2>Your Liked Prodcuts:</h2>
             <div className="products">
+               
                 <div className="sub products">   
                 {!cproducts && cproducts.length==0 && <h2>No result found</h2>  }
                

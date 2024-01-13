@@ -143,6 +143,6 @@ body {
     }
 
     .product-images img {
-        width: 300px;
+        margin-right: 0;
     }
 }
