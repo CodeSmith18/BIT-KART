@@ -302,7 +302,8 @@ body {
 @media (max-width: 1000px) {
     .user-image1 {
 
-        width: 5px;
+       max-width:  40px;
+       max-height: 40px;
         
 
     }
