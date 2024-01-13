@@ -301,11 +301,10 @@ body {
 
 @media (max-width: 1000px) {
     .user-image1 {
-<<<<<<< HEAD
+
         width: 5px;
-=======
-        width: 15%;
->>>>>>> 11ac8c36e9bba7d82e1277937587f85550523358
+        
+
     }
 }
 
