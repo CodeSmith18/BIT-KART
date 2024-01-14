@@ -12,9 +12,9 @@ BIT-KART is an innovative web development project that introduces a dynamic onli
    WEBDEVELOPMENT
 
 ## Tech Stack Used
-- FRONTEND - HTML, CSS, JAVASCRIPT, REACT
-- BACKEND  - NODE.JS , EXPRESS.JS 
-- DATABASE - MONGODB
+- FRONTEND - `HTML``CSS` `JAVASCRIPT` `REACT`
+- BACKEND  - `NODE.JS`  `EXPRESS.JS` 
+- DATABASE - `MONGODB`
 
 
 ## Achievement So Far
@@ -99,8 +99,8 @@ To run the BIT-KART project locally, follow these steps:
     Visit [http://localhost:3000](http://localhost:3000) in your browser to access the BIT-KART platform locally.
 
 
-## Link to Hosted Website
-   [here](https://main--bitkart.netlify.app/)
+## Link to Hosted Website  [here](https://main--bitkart.netlify.app/)
+   
    ![Representation](sample/1.png)
    ![Representation](sample/2.png)
    ![Representation](sample/3.png)
