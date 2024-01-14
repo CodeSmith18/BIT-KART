@@ -12,7 +12,7 @@ BIT-KART is an innovative web development project that introduces a dynamic onli
    WEBDEVELOPMENT
 
 ## Tech Stack Used
-- FRONTEND - `HTML``CSS` `JAVASCRIPT` `REACT`
+- FRONTEND - `HTML` `CSS` `JAVASCRIPT` `REACT`
 - BACKEND  - `NODE.JS`  `EXPRESS.JS` 
 - DATABASE - `MONGODB`
 
