@@ -17,44 +17,44 @@ BIT-KART is an innovative web development project that introduces a dynamic onli
 - DATABASE - `MONGODB`
 
 
-## Achievement So Far
-# MERN Stack Implementation:
+# Achievement So Far
+## MERN Stack Implementation:
 Successfully developed a full-stack web application using the MERN (MongoDB, Express.js, React, Node.js) stack, ensuring a seamless and integrated user experience.
 
-# Secure Authentication:
+## Secure Authentication:
 Implemented JWT-based authentication to ensure secure and private user logins, enhancing the overall website's security.
 
-# MongoDB Integration:
+## MongoDB Integration:
 Integrated MongoDB as the database management system, providing a scalable and efficient solution for user signup, login, and product management.
 
-# Efficient Image Uploads:
+## Efficient Image Uploads:
 Utilized Multer for image uploads, allowing users to seamlessly add images to their product listings, enhancing the visual appeal of the listings.
 
-# RESTful Routes:
+## RESTful Routes:
 Established RESTful routes for key functionalities such as user registration, login, and product management, ensuring a standardized and organized API structure.
 
-# Cross-Origin Request Handling:
+## Cross-Origin Request Handling:
 Integrated CORS middleware to handle cross-origin requests, facilitating smooth communication between the frontend and backend components.
 
-# Request Body Parsing:
+## Request Body Parsing:
 Implemented body-parser for efficient parsing of request bodies, optimizing data handling and communication between the client and server.
 
-# Dynamic and Responsive Frontend:
+## Dynamic and Responsive Frontend:
 Designed a dynamic and responsive frontend using React, enhancing user interaction and experience across various devices.
 
-# Product Details Page:
+## Product Details Page:
 Created a detailed product details page where users can view comprehensive information about a particular item, fostering transparency in second-hand transactions.
 
-# Seller Details and Contact Integration:
+## Seller Details and Contact Integration:
 Implemented a feature for users to view seller details and seamlessly contact them through WhatsApp , enhancing communication and trust between buyers and sellers.
 
-# User Registration and Login System:
+## User Registration and Login System:
 Developed a user-friendly signup and login system, requiring users to authenticate before accessing detailed product information, ensuring privacy and security.
 
-# User Profile Update:
+## User Profile Update:
 Implemented a user-friendly profile update feature, allowing users to modify and update their personal information after the initial signup, enhancing the overall user experience and personalization of profiles.
 
-##  Executing  Code
+#  Executing  Code
 
 To run the BIT-KART project locally, follow these steps:
 
