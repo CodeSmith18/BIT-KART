@@ -71,7 +71,7 @@ function ProductDetail() {
                             {product.addedBy && <button className="pd1" onClick={() => HandleContact(product.addedBy)}>Show Contact Details:</button>}
                             {user && user.username && <h2>Username:{user.username}</h2>}
                             {user && user.phno && <h2>Phone Number:{user.phno}</h2>}
-                            {user && user.phno && <h2><a href={uu}><img src={whatsapp} alt="" /></a></h2>}
+                            {user && user.phno && <h2><a href={uu} target="_blank"><img src={whatsapp} alt="" /></a ></h2>}
                             {user && user.username && <h2>Email:{user.email}</h2>}
                             {user && user.hno && <h2>Hostel Number:{user.hno}</h2>}
                             {user && user.roll && <h2>Roll:{user.roll}</h2>}
