@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage });
   // this code is used to display the stored pictures in front
   app.use('/uploads',express.static(path.join(__dirname,'uploads')));
-  let uri ='mongodb+srv://ritikraj1875:hWkC4CChc23YmFV@cluster0.ay9qf85.mongodb.net/?retryWrites=true&w=majority'
+  let uri ='mongodb+srv://ritikraj1875:8s3zafbOVnKU3NwQ@cluster0.ay9qf85.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0'
 
 
 
