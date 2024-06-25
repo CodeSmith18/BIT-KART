@@ -53,7 +53,7 @@ function UserProfile() {
   }, [user]);
 
   const update = () => {
-    const url = "https://bit-kart.onrender.com/UserProfile";
+    const url = "http://localhost:8000/UserProfile";
     const data = {
       username,
       email,

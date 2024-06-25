@@ -11,7 +11,7 @@ function Login(){
 
     const  handleApi = ()=>{
        
-        const url ='https://bit-kart.onrender.com/login';
+        const url ='http://localhost:8000/login';
         const data ={ username, password};
         axios.post(url,data)
         .then((res)=>{
