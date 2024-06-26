@@ -13,7 +13,7 @@ function ProductDetail() {
     console.log(user);
 
     useEffect(() => {
-        const url = 'http://localhost:8000/' + p.productId;
+        const url = 'https://bit-kart-1.onrender.com/' + p.productId;
         axios.get(url)
             .then((res) => {
                 if (res.data.products) {
@@ -29,7 +29,7 @@ function ProductDetail() {
 
     }, []);
     const HandleContact = (addedBy) => {
-        const url = 'http://localhost:8000/getUser/' + addedBy;
+        const url = 'https://bit-kart-1.onrender.com/' + addedBy;
         axios.get(url)
             .then((res) => {
                 if (res.data.user) {
@@ -56,8 +56,8 @@ function ProductDetail() {
             <h2>PRODUCT DETAILS:</h2>
                     {product &&<div className="product-details">
                        <div className="product-images">
-                            <img src={"http://localhost:8000/" + product.Pimage} alt="" />
-                            {product.Pimage2 && <img src={"http://localhost:8000/" + product.Pimage2} alt="" />}
+                            <img src={"https://bit-kart-1.onrender.com/" + product.Pimage} alt="" />
+                            {product.Pimage2 && <img src={"https://bit-kart-1.onrender.com/" + product.Pimage2} alt="" />}
                             
                         </div>
                        <div className="pdd">
